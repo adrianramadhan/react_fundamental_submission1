@@ -1,10 +1,8 @@
 import React from "react";
 import NoteItem from "./NoteItem";
-import { getAllNotes } from "../utils/local-data";
 
-const notes = getAllNotes();
-
-function NotesList() {
+function NotesList({ notes }) {
+  console.log(notes);
   if (notes.length === 0) {
     return (
       <div className="notes-list-empty">
@@ -14,16 +12,17 @@ function NotesList() {
   }
 
   return (
-    <div className="notes-list">
+    <>
       {notes.map((note) => (
         <NoteItem
           key={note.id}
+          id={note.id}
           title={note.title}
           createdAt={note.createdAt}
           body={note.body}
         />
       ))}
-    </div>
+    </>
   );
 }
 
