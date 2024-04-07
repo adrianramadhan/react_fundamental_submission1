@@ -1,12 +1,8 @@
 import React from "react";
+import NotFoundComponent from "../components/NotFoundComponent";
 
 function NotFoundPage() {
-  return (
-    <div>
-      <h1>404 - Halaman Tidak Ditemukan</h1>
-      <p>Maaf, halaman yang Anda cari tidak ditemukan.</p>
-    </div>
-  );
+  return <NotFoundComponent />;
 }
 
 export default NotFoundPage;

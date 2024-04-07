@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { FaTrash } from "react-icons/fa";
 
 function NoteItem({ id, title, createdAt, body }) {
   return (
@@ -13,5 +15,11 @@ function NoteItem({ id, title, createdAt, body }) {
     </div>
   );
 }
+
+NoteItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  createdAt: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+};
 
 export default NoteItem;
